@@ -22,13 +22,13 @@ public class Book {
     @NotNull
     private UUID id;
 
-    @Length(min = 3, max = 50,message = "Length min = 2, max = 50")
+    @Length(min = 3, max = 50,message = "Length min = 3, max = 50")
     private String name;
 
-    @Size(min = 1,max = 3)
+    @Size(min = 1,max = 3, message = "Size authors can be min = 1, max = 3")
     private List<@Valid Author> authors;
 
-    @Length(min = 5 ,max = 50)
+    @Length(min = 5,max = 50,message = "Length can be 50 max, min 5")
     private String publisher;
 
     @NotEmpty(message = "Year can not be empty")
@@ -39,13 +39,13 @@ public class Book {
     private List<@NotBlank String> translators;
 
     @NotEmpty
-    @Length(max = 50,message = "Length can be 50 max")
+    @Length(min =5 ,max = 50,message = "Length can be 50 max and min 5")
     private String description;
 
-    @Size(min = 1,max = 3)
+    @Size(min = 1,max = 3, message = "Size genre can be min = 1, max = 3")
     private List<@NotBlank String> genre;
 
-    @NotNull
+    @NotNull(message = "Available not can be null")
     private Boolean isAvailable;
 
 }

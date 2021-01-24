@@ -12,8 +12,8 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 public class Author {
 
-    @NotEmpty
-    @NotNull
+    @NotEmpty(message = "Name author not can be empty")
+    @NotNull(message = "Name author not can be null")
     private String name;
 
 }
