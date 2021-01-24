@@ -3,7 +3,6 @@ package com.kafka.producer.controller;
 import com.kafka.producer.model.Book;
 import com.kafka.producer.service.ProducerService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -16,13 +16,13 @@ public class ProducerConfig {
     @Bean
     public SenderOptions<String,String> senderOptions() {
 
-       Map<String, Object> props = new HashMap<>();
-       props.put(org.apache.kafka.clients.producer.ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, Constants.BOOTSTRAP_SERVERS);
-       props.put(org.apache.kafka.clients.producer.ProducerConfig.CLIENT_ID_CONFIG, Constants.CLIENT_ID_CONFIG);
-       props.put(org.apache.kafka.clients.producer.ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-       props.put(org.apache.kafka.clients.producer.ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+       Map<String, Object> config = new HashMap<>();
+       config.put(org.apache.kafka.clients.producer.ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, Constants.BOOTSTRAP_SERVERS);
+       config.put(org.apache.kafka.clients.producer.ProducerConfig.CLIENT_ID_CONFIG, Constants.CLIENT_ID_CONFIG);
+       config.put(org.apache.kafka.clients.producer.ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+       config.put(org.apache.kafka.clients.producer.ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
-       return SenderOptions.create(props);
+       return SenderOptions.create(config);
     }
 
    @Bean
